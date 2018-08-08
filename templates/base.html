@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<link rel="shortcut icon" href="/static/images/favicon.ico">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{% block title %}{% endblock %}</title>
+	{% load staticfiles %}
+	<link rel="stylesheet" type="text/css" href="{% static "css/base.css" %}?v=82">
+	<link rel="stylesheet" type="text/css" href="{% block extrastyle %}{% endblock %}">
+</head>
+<body>
+{% if request.session.debug_mode %}
+<style>
+.debug{
+	text-align: center;
+	background: gray;
+	padding: 5px;
+	color: #FFF;
+	font-weight: bold;
+	background: linear-gradient(45deg, #8a8a8a 25%, #000000 0, #000000 50%, #8a8a8a 0, #8a8a8a 75%, #000000 0);
+	-webkit-background-size: 20px 20px;
+	background-size: 20px 20px;
+	font-size: 12px;
+}
+</style>
+<div class="debug">DEBUG MODE</div>
+{% endif %}
+<div class="header">
+	<div class="header-row">
+		<div class="logo">
+			<a href="{% url 'index' %}"><div class="header-logo"></div></a>
+		</div>
+		<div class="header-menu">
+			<div class="header-menu-sub {% if category in 'history' %}sel{% endif %}">
+				<a href="{% url 'history:index' %}">History</a>
+			</div>
+			<div class="header-menu-sub {% if category in 'portfolio' %}sel{% endif %}">
+				<a href="{% url 'portfolio:index' %}">Portfolio</a>
+			</div>
+
+			<div class="header-menu-sub {% if category in 'contents' %}sel{% endif %}">
+				<a href="{% url 'contents:index' %}">쉼표</a>
+			</div>
+			<div class="header-menu-sub {% if category in 'workflow' %}sel{% endif %}">
+				<a href="{% url 'workflow:index' %}">Workflow</a>
+			</div>
+			<div class="header-menu-sub {% if category in 'qna' %}sel{% endif %}">
+				<a href="{% url 'qna:index' %}">Q&amp;A</a>
+			</div>
+		</div>
+	</div>
+	<div class="mobile-header-row">
+		<div class="mobile-header-bg"></div>
+		<div class="logo">
+			<a href="{% url 'index' %}"><div class="logo-img">{ LOGO IMAGE }</div></a>
+		</div>
+		<label for="toggle"></label>
+		<div class="menu-btn" id="header-menu-btn"></div>
+		<div class="menu-btn-row" id="mobile-header-menu">
+			<a href="{% url 'history:index' %}"><div class="mobile-menu-sub">History</div></a>
+			<a href="{% url 'portfolio:index' %}"><div class="mobile-menu-sub">Portfolio</div></a>
+			<a href="{% url 'contents:index' %}"><div class="mobile-menu-sub">쉼표</div></a>
+			<a href="{% url 'workflow:index' %}"><div class="mobile-menu-sub">Workflow</div></a>
+			<a href="{% url 'qna:index' %}"><div class="mobile-menu-sub">Q&amp;A</div></a>
+		</div>
+	</div>
+</div>
+{% block content %}{% endblock %}
+<script type="text/javascript" src="{% static 'js/base.js' %}"></script>
+<div id="footer">
+	<div class="footer-background"></div>
+	<span>Copyright 2015-{% now 'Y' %} Goodboy Pictures All Rights Reserved</span>
+</div>
+</body>
+<!-- <script src="https://statistics.jhje.co.kr/inflow.js"></script> -->
+</html>

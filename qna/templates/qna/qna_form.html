@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+
+{% block title %}QNA | {{ page_title }}{% endblock %}
+
+{% load staticfiles %}
+{% block extrastyle %}{% static 'css/qna.css' %}?v={{ css_version }}{% endblock %}
+
+{% block content %}
+<div id="content">
+    <div class="qna">
+        <div class="title-sub"">하단의 양식에 따라 상담내용을 전송해 주시면 <br>빠른 시간안에 답변해 드리겠습니다.</div>
+        <div class="qna-form">
+            <form action="." method="POST" novalidate>
+                {% csrf_token %}
+                <div class="qna-form-list">
+                    <label for="name">이름</label>
+                    <input class="base1 {% if form.errors.name %}error{% endif %}" type="text" name="name" id="name" required placeholder="이름" value="{% if form.name.value %}{{ form.name.value }}{% endif %}">
+                    {% if form.errors.name %}
+                    <div class="error_msg1">{{form.errors.name}}</div>
+                    {% endif %}
+                </div>
+                <div class="qna-form-list">
+                    <label for="email">이메일</label>
+                    <input class="base1 {% if form.errors.email %}error{% endif %}" type="email" name="email" id="email" required placeholder="이메일" value="{% if form.email.value %}{{ form.email.value }}{% endif %}">
+                    {% if form.errors.email %}
+                    <div class="error_msg1">{{form.errors.email}}</div>
+                    {% endif %}
+                </div>
+                <div class="qna-form-list">
+                    <label for="budget">예산</label>
+                    <input class="base1 {% if form.errors.budget %}error{% endif %}" type="budget" name="budget" id="budget" required placeholder="예산" value="{% if form.budget.value %}{{ form.budget.value }}{% endif %}">
+                    {% if form.errors.budget %}
+                    <div class="error_msg1">{{form.errors.budget}}</div>
+                    {% endif %}
+                </div>
+                <div class="qna-form-list">
+                    <label for="subject">제목</label>
+                    <input class="base1 {% if form.errors.subject %}error{% endif %}" type="text" name="subject" id="subject" required placeholder="제목" value="{% if form.subject.value %}{{ form.subject.value }}{% endif %}">
+                    {% if form.errors.subject %}
+                    <div class="error_msg1">{{form.errors.subject}}</div>
+                    {% endif %}
+                </div>
+                <div class="qna-form-list">
+                    <label class="top" for="message">내용</label>
+                    <textarea class="base1 {% if form.errors.content %}error{% endif %}" name="content" id="message" cols="30" rows="10" placeholder="내용">{% if form.content.value %}{{ form.content.value }}{% endif %}</textarea>
+                    {% if form.errors.content %}
+                    <div class="error_msg1">{{form.errors.content}}</div>
+                    {% endif %}
+                </div>
+                <div class="button-row qna-btn">
+                    <button class="button button5">문의하기</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

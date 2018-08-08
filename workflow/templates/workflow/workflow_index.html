@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+
+{% block title %}워크플로우 | {{ page_title }}{% endblock %}
+
+{% load staticfiles %}
+{% block extrastyle %}{% static 'css/workflow.css' %}?v={{ css_version }}{% endblock %}
+
+{% block content %}
+<div class="bg bg3"></div>
+<div class="content-bottom-not-space" id="content">
+	<div class="workflow-top-row">
+		<div class="workflow-top-title contact">
+			<div class="type-title">CONTACT</div>
+			<div class="type-list">
+				<div>제작문의</div>
+				<div>기획미팅</div>
+				<div>제안, 견적제시</div>
+				<div>계약</div>	
+			</div>
+		</div>
+		<div class="workflow-top-title pre-production">
+			<div class="type-title">PRE-PRODUCTION</div>
+			<div class="type-list">
+				<div>프로젝트 분석</div>
+				<div>자료 수집</div>
+				<div>기획 구성 / 시나리오 작성</div>
+				<div>스케쥴링 / 섭외</div>
+				<div>스텝 및 촬영 장비 구성</div>
+			</div>
+		</div>
+		<div class="workflow-top-title production">
+			<div class="type-title">PRODUCTION</div>
+			<div class="type-list">
+				<div>프로젝트 제작</div>
+				<div>연출</div>
+				<div>촬영</div>
+				<div>동시녹음</div>
+				<div>가편집</div>
+			</div>
+		</div>
+		<div class="workflow-top-title post-production">
+			<div class="type-title">POST-PRODUCTION</div>
+			<div class="type-list">
+				<div>후반작업</div>
+				<div>사운드 디자인</div>
+				<div>성우 녹음</div>
+				<div>편집 2D</div>
+				<div>색보정</div>
+				<div>시사 및 수정</div>
+			</div>
+		</div>
+		<div class="workflow-top-title final">
+			<div class="type-title">FINAL</div>
+			<div class="type-list">
+				<div>납품</div>
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock %}

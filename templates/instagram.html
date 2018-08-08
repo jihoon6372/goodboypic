@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block title %}굿보이 픽쳐스{% endblock %}
+
+{% block content %}
+<div class="bg bg1"></div>
+<div id="content">
+	<div class="main">
+		<div class="main-logo"></div>
+		<div class="introduce">
+			성장하는 영화영상제작사 {% if request.user_agent.is_mobile %}<br>{% endif %}굿보이픽쳐스 입니다.
+		</div>
+		<div class="instagram-area">
+			<div class="instagram-user">
+				<div class="picture">
+					<img src="{{ instagram_user.data.profile_picture }}" alt="">
+				</div>
+				<div class="description">
+					<div class="username">{{ instagram_user.data.username }}</div>
+					<div class="user-info">
+						<span>게시물 {{ instagram_user.data.counts.media }}</span>
+						<span>팔로워 {{ instagram_user.data.counts.followed_by }}</span>
+						<span>팔로우 {{ instagram_user.data.counts.follows }}</span>
+					</div>
+					<div class="bio">{% autoescape off %}{{ instagram_bio }}{% endautoescape %}&nbsp;<a href="{{ instagram_user.data.website }}" target="_blank">{{ instagram_user.data.website }}</a></div>
+				</div>
+			</div>
+			<div class="instagram-media">
+				{% for item in instagram_media.data %}
+				<div style="position: relative;">
+					<a href="{{ item.link }}" target="_blank">
+						<div class="instagram-thumbnail">
+							<img src="{{ item.images.thumbnail.url }}">
+							<div class="media-info" style="position: absolute; top: 0;">
+								<span class="insta-icon insta-likes">{{ item.likes.count }}</span>
+								<span class="insta-icon insta-comments">{{ item.comments.count }}</span>
+							</div>
+						</div>
+					</a>
+				</div>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+</div>
+{% load staticfiles %}
+<script type="text/javascript" src="{% static 'js/instagram.js' %}"></script>
+{% endblock content %}

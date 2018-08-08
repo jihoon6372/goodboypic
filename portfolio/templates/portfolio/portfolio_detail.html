@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block title %}{{ object.title }} | {{ page_title }}{% endblock %}
+
+{% load staticfiles %}
+{% block extrastyle %}{% static "css/portfolio.css" %}?v={{ css_version }}{% endblock %}
+
+{% load portfolio_filters %}
+{% block content %}
+<div class="bg bg1"></div>
+<div id="content">
+	<div class="portfolio-detail">
+		<div class="portfolio-title">
+			<div class="portfolio-thumbnail">
+				<div class="line"></div>
+				{% if object.image %}
+	            <img class="thumbnail margin-5" src="{{ object.image.thumb_url }}" />
+	            {% else %}
+	            <img class="thumbnail margin-5" src="{{ object.link|youtube_thumb_url }}" onerror="this.src='{% static "images/default-picture.png"%}'" width="320" />
+	            {% endif %}
+			</div>
+			<div class="portfolio-subject">
+				<div class="line"></div>
+				<span>{{ object.title }}</span>
+				<!-- <div class="under-line"></div> -->
+			</div>
+		</div>
+
+		<div class="description-row">
+			<div class="description-title">DESCRIPTION</div>
+			<div class="description">
+				{{ object.description|linebreaks }}
+			</div>
+			{% if youtube_content_id %}
+			<div class="movie">
+				<iframe width="720" height="480" src="https://www.youtube.com/embed/{{youtube_content_id}}" frameborder="0" allowfullscreen></iframe>
+			</div>
+			{% endif %}			
+		</div>
+    </div>
+</div>
+{% endblock %}

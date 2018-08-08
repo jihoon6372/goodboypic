@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}굿보이 픽쳐스{% endblock %}
+
+{% block content %}
+<div class="bg bg1"></div>
+<div id="content">
+	<div class="main">
+		<div class="main-logo"></div>
+		<div class="introduce">
+			    성장하는 영화영상제작사 {% if request.user_agent.is_mobile %}<br>{% endif %}굿보이픽쳐스 입니다.
+		</div>
+	</div>
+</div>
+{% endblock content %}

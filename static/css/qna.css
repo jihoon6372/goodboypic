@@ -1,0 +1,137 @@
+.qna{
+	width: 800px;
+	/*background-color: #fff;*/
+	margin: 0 auto;
+	padding-top: 60px;
+}
+
+.qna .title, .qna .title-sub{
+	text-align: center;
+	font-size: 30px;
+	color: #ffffff;
+	font-weight: bold;
+	color: #616161;
+}
+
+.qna .title-sub{
+	font-size: 16px;
+	font-weight: inherit;
+	margin-top: 15px;
+	color: #484747;
+}
+
+.qna-form{
+	width: 320px;
+	margin: 0 auto;
+	margin-top: 50px;
+}
+
+input.base1, textarea.base1{
+	width: 300px;
+	padding: 10px;
+	border-radius: 5px;
+	border: 0;
+	background-color: #d4d4d4;
+}
+
+.base1.error{
+	border: solid 2px #ff7a7a;
+	box-shadow: 0px 0px 10px #f34444;
+	-moz-box-shadow: 0px 0px 10px #f34444;
+	-webkit-box-shadow: 0px 0px 10px #f34444;
+}
+
+.qna-form-list{
+	margin-top: 15px;
+}
+
+.qna-form-list > label{
+	width: 64px;
+	color: #FFF;
+	display: inline-block;
+	text-align: right;
+	margin-right: 11px;
+}
+
+.qna-form-list > label.top{
+	vertical-align: top;
+}
+
+.title-sub>br{
+	display: none;
+}
+.qna-form-list > label{
+	display: none;
+}
+
+.qna-comp{
+	text-align: center;
+	margin-top: 50px;
+	padding-bottom: 50px;
+	border-bottom: solid 1px #616161;
+}
+
+.qna-comp .title{
+	font-weight: bold;
+	font-size: 35px;
+}
+
+.qna-comp .qna-comp-msg{
+	margin-top: 10px;
+	font-size: 17px;
+	color: #3e3e3e;
+	font-weight: bold;
+}
+
+.qna-comp-detail{
+	text-align: center;
+	margin-top: 70px;
+}
+
+.qna-comp-detail .qna_success_bg .msg{
+	margin-top: 25px;
+	color: #3e3e3e;
+	font-weight: bold;
+}
+
+.qna-comp-detail .qna_success_bg{
+	padding-top: 73px;
+	background-image: url(/static/images/signing-128.png);
+	background-repeat: no-repeat;
+	background-position: 50% 0;
+	background-size: auto 73px;
+	position: relative;
+}
+
+@media screen and (max-width:640px) {
+	.qna, .qna-form{
+		width: 100%;
+		padding-top: 0px;
+	}
+	.title-sub{
+		padding: 15px;
+	}
+	.title-sub>br{
+		display: block;
+	}
+	.qna-form-list{
+		text-align: center;
+	}
+
+	.qna-form-list > label{
+		display: none;
+	}
+
+	input.base1, textarea.base1{
+		width: 85vw;
+	}
+}
+
+@media screen and (max-width:1000px) {
+	.qna, .qna-form{
+		width: 100%;
+	}
+	.qna-form-list{
+		text-align: center;
+	}
+}

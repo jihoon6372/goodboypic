@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block title %}포트폴리오{% endblock %}
+
+{% load staticfiles %}
+{% block extrastyle %}{% static "css/portfolio.css" %}{% endblock %}
+
+{% block content %}
+<style type="text/css">
+	.portfolio{
+		margin-left: 50px;
+		margin-top: 50px;
+	}
+</style>
+<div id="content">
+	<div class="portfolio">
+
+
+		<div class="clear_float">
+	        <h2 style="display:inline"><a href="#">포트폴리오</a></h2>
+	    </div>
+
+		<div class="album-list">
+			{% for item in object_list %}
+
+			{% for portfolio in item.portfolio_set.all|slice:"5" %}
+	        <div class="album-list-photo">
+	            <a href="{{ portfolio.get_absolute_url }}">
+	            <img class="thumbnail" src="{{ portfolio.image.thumb_url }}" />
+	            </a>
+	            <!-- <li class="title">{{ portfolio.title }}</li>
+           		<li>{{ portfolio.description }}</li> -->
+	        </div>
+	        {% endfor %}
+	        
+	        {% endfor %}
+	    </div>
+
+
+
+    </div>
+</div>
+{% endblock %}

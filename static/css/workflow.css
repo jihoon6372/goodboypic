@@ -1,0 +1,81 @@
+.workflow-top-row{
+	width: 1000px;
+	margin: 0 auto;
+	height: 300px;
+	padding-top: 150px;
+	overflow: auto;
+}
+
+.workflow-top-title{
+	float: left;
+	width: 200px;
+	background-repeat: no-repeat;
+	background-size: auto 35px;
+	background-position: 50% 0px;
+	text-align: center;
+	padding-top: 40px;
+	font-family: 'Noto Sans KR';
+}
+
+.workflow-top-title.contact{
+	background-image: url(/static/images/contact-64-2.png);
+}
+
+.workflow-top-title.pre-production{
+	background-image: url(/static/images/pre-production-64-1.png);
+}
+
+.workflow-top-title.production{
+	background-image: url(/static/images/video-camera-64-1.png);
+}
+
+.workflow-top-title.post-production{
+	background-image: url(/static/images/post-production-64-3.png);
+}
+
+.workflow-top-title.final{
+	background-image: url(/static/images/project-final-64-2.png);
+}
+
+.workflow-top-title .type-title{
+	font-weight: bold;
+	color: #e49999;
+}
+
+.workflow-top-title .type-list{
+	margin-top: 15px;
+	line-height: 25px;
+	font-size: 15px;
+	/*font-weight: bold;*/
+	color: #d6d6d6;
+}
+
+@media screen and (max-width:640px) {
+	.workflow-top-row{
+		width: 100%;
+		height: auto;
+		padding-top: 50px;
+	}
+	.workflow-top-title{
+		float: none;
+		width: 100%;
+		margin-bottom: 50px;
+	}
+}
+
+@media screen and (max-width:1000px) {
+	.workflow-top-row{
+		width: 100%;
+		height: auto;
+		padding-top: 50px;
+	}
+	.workflow-top-title{
+		float: none;
+		width: 100%;
+		margin-bottom: 50px;
+	}
+	
+	.workflow-top-row{
+		width: 100%;
+	}
+}

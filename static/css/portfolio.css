@@ -1,0 +1,265 @@
+/* album_list.html */
+div.album-list {
+    margin: 20px 50px;
+    overflow: auto;
+}
+
+div.album-list-photo {
+    float: left;
+    width: 240px;
+    height: 200px;
+    text-align: center;
+}
+
+div.album-list-photo img{
+    width: 200px;
+    height: 128px;
+}
+
+div.album-list-photo li{
+    font-size: 13px;
+}
+
+div.album-list-photo li.title{
+    display: inline-block;
+    width: 206px;
+    text-align: center;
+    font-size: 20px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+/* album_detail.html */
+div.album-detail {
+    margin: 30px 10px;
+}
+
+div.album-detail-photo {
+    float: left;
+    width: 220px;
+    height: 220px;
+}
+
+div.album-detail-photo > li {
+    font-size: 10px;
+    font-weight: bold;
+    font-style: italic;
+}
+
+/* photo_detail.html */
+table.photo-detail {
+    margin: 30px 50px 0 50px;
+    border: 1px solid #ccc;
+}
+
+table.photo-detail td {
+    width: 50%;
+}
+
+table.photo-detail ul li {
+    font-weight: bold;
+}
+
+table.photo-detail ul p {
+    font-style: italic;
+}
+
+/* common */
+img.thumbnail {
+    border:3px solid #ccc;
+}
+
+div.clear_float {
+    clear: both;
+}
+
+
+.portfolio{
+    margin-left: 50px;
+    padding-top: 50px;
+}
+
+
+.portfolio-detail{
+    width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 50px;
+    color: #FFF;
+    font-weight: bold;
+}
+
+.portfolio-title{
+    overflow: auto;
+    border-bottom: solid 3px;
+    padding-bottom: 10px;
+}
+
+.portfolio-title>.portfolio-thumbnail, .portfolio-title>.portfolio-subject{
+    float: left;
+}
+
+.portfolio-title>.portfolio-subject{
+    font-size: 14px;
+    margin-left: 15px;
+    width: 445px;
+    text-align: left;
+}
+
+.portfolio-title .line{
+    padding-top: 10px;
+    border-top: solid 3px;
+    width: 30px;
+}
+
+.portfolio-title .under-line{
+    padding-bottom: 10px;
+    border-bottom: solid 3px;
+    width: 30px;
+}
+
+.margin-5{
+    margin: 5px;
+    display: inline-block;
+}
+
+.description-row, .description-row .description, .description-row .movie{
+    margin-top: 15px;
+}
+
+.description-row .description-title{
+    text-align: left;
+}
+
+.description-title{
+    color: #bbbbbb;
+    font-size: 18px;
+}
+
+.description-row .description{
+    text-align: left;
+    font-weight: initial;
+}
+
+.portfolio-subject>span{
+    padding-left: 5px;
+    display: inline-block;
+}
+
+@media screen and (max-width: 1024px){
+    .portfolio{
+        margin-left: 0;
+    }
+
+    div.album-list{
+        margin: 0;
+    }
+
+    div.album-list-photo{
+        width: 25%;
+    }
+
+    .list-title{
+        margin-left: 3vw;
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width:1000px) {
+    .portfolio{
+        margin: 0;
+        padding: 0;
+        padding: 20px;
+    }
+    .album-list{
+        margin: 0px !important;
+        margin-top: 30px !important;
+    }
+
+    div.album-list-photo {
+        width: 33.3%;
+        text-align: center;
+    }
+
+    .portfolio-detail{
+        width: 100%;
+    }
+
+    .portfolio-title>.portfolio-subject{
+        width: 400px;
+    }
+
+    .description-row{
+        padding: 20px;
+    }
+}
+
+@media screen and (max-width:640px) {
+    .portfolio{
+        margin: 0;
+        padding: 0;
+        padding: 20px;
+        padding-top: 10px;
+    }
+    .album-list{
+        margin: 0px !important;
+        margin-top: 5px !important;
+    }
+
+    div.album-list-photo {
+        width: 100%;
+        text-align: center;
+        margin: 5px 0;
+    }
+
+    .album-list-photo img{
+        width: 80vw !important;
+        height: 51vw !important;
+    }
+
+    .portfolio-detail{
+        width: 100%;
+        padding-top: 10px;
+    }
+    .portfolio-title>.portfolio-thumbnail, .portfolio-title>.portfolio-subject{
+        float: none;
+        width: 100%;
+    }
+    img.thumbnail{
+        border: 0;
+        width: 100%;
+    }
+
+    .margin-5{
+        margin: 0;
+    }
+
+    .line{
+        display: none;
+    }
+    iframe{
+        width: 100%;
+        height: auto;
+    }
+    .portfolio-title>.portfolio-subject{
+        margin-left: 0;
+    }
+    .description-row{
+        padding: 10px;
+        font-size: 13px;
+    }
+
+    .portfolio-title{
+        padding-bottom: 5px;
+    }
+
+    .portfolio-subject>span {
+        font-size: 13px;
+        text-align: center;
+        padding: 5px 15px;
+    }
+
+    .list-title:not(:first-child){
+        margin-top: 20px;
+    }
+}

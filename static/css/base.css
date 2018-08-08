@@ -1,0 +1,561 @@
+@import url(//fonts.googleapis.com/earlyaccess/nanumgothic.css);
+@import url(//fonts.googleapis.com/earlyaccess/hanna.css);
+@import url(//fonts.googleapis.com/earlyaccess/jejugothic.css);
+@import url(//fonts.googleapis.com/earlyaccess/jejuhallasan.css);
+@import url(//fonts.googleapis.com/earlyaccess/jejumyeongjo.css);
+@import url(//fonts.googleapis.com/earlyaccess/kopubbatang.css);
+@import url(//fonts.googleapis.com/earlyaccess/nanumbrushscript.css);
+@import url(//fonts.googleapis.com/earlyaccess/nanumgothiccoding.css);
+@import url(//fonts.googleapis.com/earlyaccess/nanummyeongjo.css);
+@import url(//fonts.googleapis.com/earlyaccess/nanumpenscript.css);
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+a:link {color: inherit; text-decoration: none;}
+a:visited {color: inherit; text-decoration: none;}
+a:hover {color: inherit; text-decoration: none;}
+body{
+	background: gray;
+	margin: 0;
+	position: relative;
+	/*font-family: 'Noto Sans KR';*/
+	font-family: Arial, sans-serif;
+}
+ul{
+    padding: 0;
+    margin: 0;
+}
+li{
+    list-style: none;
+}
+
+.header{
+	height: 90px;
+	/*background: #FFF;*/
+}
+
+.header .header-row{
+	max-width: 80vw;
+	margin: 0 auto;
+	height: 100%;
+	/*background: red;*/
+	overflow: hidden;
+}
+
+.header .header-row .logo{
+	float: left;
+}
+
+.header .header-row .header-menu{
+	float: right;
+	font-family: 'Noto Sans KR';
+}
+
+.header .header-row .header-menu .header-menu-sub{
+	float: left;
+	line-height: 88px;
+	
+	color: #fff;
+	font-weight: bold;
+}
+
+.header .header-row .header-menu .header-menu-sub:not(:last-child){
+	margin-right: 50px;
+}
+
+.header .header-row .header-menu .header-menu-sub a{
+	font-size: 14px;
+}
+
+.header .header-row .header-menu .header-menu-sub a:hover, .header .header-row .header-menu .header-menu-sub.sel{
+	color: #ff7c7c;
+	-webkit-transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+}
+
+div#content {
+	/*position: absolute;*/
+	top: 100px;
+	left: 50px;
+	right: 50px;
+	min-height: 100vh;
+	min-height: 76vh;
+	padding-bottom: 100px;
+}
+
+
+div#footer {
+	/*position: absolute;*/
+	position: relative;
+	width: 100%;
+	bottom: 0px;
+	min-height: 40px;
+	line-height: 40px;
+	font-size: 13px;
+	color: #fff;
+	text-align: center;
+	z-index: 100;
+}
+
+div.footer-background{
+	width: 100%;
+	height: 100%;
+	background: #464646;
+	position: absolute;
+	z-index: -1;
+	opacity: 0.7;
+}
+
+.temp{
+	position: absolute;
+	/*height: 100%; */
+	width: 100%;
+	text-align: center;
+	line-height: 60vh;
+	font-size: 40px;
+	font-weight: bold;
+	/*background: rgba(255, 255, 255, 0.18);*/
+}
+
+.header-logo{
+	line-height: 50px;
+    background-image: url(/static/images/header-logo-white.png);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    width: 70px;
+    height: 50px;
+    background-size: 68px;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+    width: 320px;
+}
+
+.button1 {
+    background-color: white; 
+    color: black; 
+    border: 2px solid #4CAF50;
+}
+
+.button1:hover {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.button2 {
+    background-color: white; 
+    color: black; 
+    border: 2px solid #008CBA;
+}
+
+.button2:hover {
+    background-color: #008CBA;
+    color: white;
+}
+
+.button3 {
+    background-color: white; 
+    color: black; 
+    border: 2px solid #f44336;
+}
+
+.button3:hover {
+    background-color: #f44336;
+    color: white;
+}
+
+.button4 {
+    background-color: white;
+    color: black;
+    border: 2px solid #e7e7e7;
+}
+
+.button4:hover {background-color: #e7e7e7;}
+
+.button5 {
+    background-color: #b5b5b5;
+    color: black;
+    border: 2px solid #6d6d6d;
+	border-radius: 5px;
+}
+
+.button5:hover {
+    background-color: #555555;
+    color: white;
+}
+
+.button-row{
+	text-align: center;
+    margin-top: 20px;
+}
+
+textarea.base1{
+	resize: none;
+	overflow:hidden;
+}
+
+
+.bg{
+	opacity: 0.2;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-repeat: no-repeat;
+	z-index: -1;
+	background-size: auto 120%;
+	background-attachment: fixed;
+	background-position: 0px 0px;
+}
+
+.bg1{
+	background-image: url(/static/images/bg1_1920x1080.jpg);
+}
+
+.bg2{
+	background-image: url(/static/images/bg2_1920x1080.jpg);
+}
+
+.bg3{
+	background-image: url(/static/images/bg3_1920x1080.jpg);
+}
+
+.page-not-found{
+	text-align: center;
+    padding-top: 300px;
+    font-size: 30px;
+}
+
+.error_msg1{
+    text-align: center;
+    color: #C62828;
+    margin-top: 5px;
+}
+
+.mobile-header-row{
+	display: none;	
+}
+
+.main{
+	text-align: center;
+	padding-top: 80px;
+}
+
+.main .main-logo{
+	margin-top: 150px;
+	height: 400px;
+	width: 500px;
+	margin: 0 auto;
+	background-image: url(/static/images/main-logo.png);
+	background-repeat: no-repeat;
+	font-size: 0;
+	background-position: 50%;
+}
+
+.main .introduce{
+	padding-bottom: 100px;
+	font-size: 40px;
+	font-family: 'Nanum Pen Script';
+}
+
+
+/* 인스타그램 CSS */
+.main .main-logo{
+    height: 260px;
+}
+.main .introduce{
+	font-size: 35px;
+	padding-bottom: 30px;
+}
+.instagram-area{
+	width: 900px;
+	margin: 0 auto;
+	/*background: #fafafa;*/
+	background: #fafafa75;
+}
+.instagram-user{
+	text-align: left;
+    padding: 20px;
+    overflow: auto;
+}
+
+.instagram-user .picture{
+	float: left;
+	width: 230px;
+	text-align: center;	
+	padding-top: 10px;
+}
+
+.instagram-user .description{
+	float: left;
+	width: 630px;
+	font-size: 15px;
+}
+
+.instagram-user .picture img{
+	width: 120px;
+	border-radius: 100px;
+}
+
+.instagram-area .description .username{
+	font-size: 32px;
+	line-height: 40px;
+	font-weight: 200;
+}
+
+.instagram-area .description .user-info span{
+	line-height: 40px;
+	display: inline-block;
+	width: 120px;
+	font-weight: bold;
+}
+
+.instagram-media{
+	overflow: auto;
+	padding: 20px;
+}
+
+.instagram-media>div{
+	float: left;
+	width: calc(860px / 5);
+	margin-bottom: 20px;
+}
+
+.media-info{
+	display: none;
+    position: absolute;
+    top: 0;
+    left: 11px;
+    width: 150px;
+    height: 150px;
+    background: #00000075;
+}
+
+.media-info{
+	color: #FFF;
+	font-size: 14px;
+	line-height: 150px;
+}
+
+.insta-icon{
+	padding-left: 25px;
+	background-size: auto 14px;
+	background-repeat: no-repeat;
+	background-position: 5px 50%;
+	margin-right: 7px;
+}
+.insta-likes{
+	background-image: url(/static/images/like-64.png);
+}
+
+.insta-comments{
+	background-image: url(/static/images/comments-64.png);
+}
+
+.instagram-thumbnail{
+	display: inline-block;
+}
+
+a.tag-link{
+	color: #003569;
+}
+
+@media screen and (max-width:1000px) {
+	.bg{
+		content: "";
+		display: block;
+		position: fixed;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		z-index: -10;
+	}
+
+	.bg1{
+		background: url(/static/images/bg1_768x1024.jpg) no-repeat;
+	}
+
+	.bg2{
+		background: url(/static/images/bg2_768x1024.jpg) no-repeat;
+	}
+
+	.bg3{
+		background: url(/static/images/bg3_768x1024.jpg) no-repeat;
+	}
+	.main .introduce{
+		margin-bottom: 170px;
+	}
+	
+	.instagram-area{
+		display: none;
+	}
+
+}
+
+
+@media screen and (max-width:640px) {
+	.header{
+		height: inherit;
+	}
+	.header-row{
+		display: none;
+	}
+	.logo-img {
+		line-height: 50px;
+		background-image: url(/static/images/header-logo-gray.png);
+		margin: 0px;
+		width: 50px;
+		height: 30px;
+		padding: 5px;
+		background-size: auto 79%;
+		background-repeat: no-repeat;
+		background-position: 50%;
+		font-size: 0;
+		margin-top: 10px;
+	}
+	.logo{
+		display: inline-block;
+		position: relative;
+    	left: 15px;
+	}
+
+	.header-row{
+		width: 100%;
+		max-width: inherit !important;
+	}
+	.mobile-header-row{
+		display: block;
+		top: 0;
+		width: 100%;
+		z-index: 2;
+		margin-bottom: 15px;
+	}
+
+	.mobile-header-row .menu-btn{
+		background-image: url(/static/images/lines-menu-32-1.png);
+		background-repeat: no-repeat;
+		width: 20px;
+		height: 20px;
+		background-size: auto 20px;
+		position: absolute;
+		right: 20px;
+		top: 20px;
+
+	}
+	.mobile-menu-sub{
+		font-family: 'Noto Sans KR';
+		padding: 5px 0;
+		padding-left: 30px;
+	    /*background: #9b9b9b;*/
+    	/*border-bottom: solid 1px #797979;*/
+    	border-bottom: solid 1px #9b9b9b;
+		font-size: 13px;
+		font-weight: bold;
+		color: #bdbdbd;
+	}
+
+	.menu-btn-row{
+		overflow: hidden;
+	}
+
+	.menu-btn-row{
+		height: 0px;
+		-webkit-transition: height 0.15s linear;
+		-moz-transition: height 0.15s linear;
+		-ms-transition: height 0.15s linear;
+		-o-transition: height 0.15s linear;
+		transition: height 0.15s linear;
+	}
+
+	.menu-btn-row.open{
+		height: 150px;
+		-webkit-transition: height 0.15s linear;
+		-moz-transition: height 0.15s linear;
+		-ms-transition: height 0.15s linear;
+		-o-transition: height 0.15s linear;
+		transition: height 0.15s linear;
+	}
+
+	.button {
+	    width: 90vw;
+	}
+
+	.bg{
+		content: "";
+		display: block;
+		position: fixed;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		z-index: -10;
+	}
+
+	.bg1{
+		/*background: url(/static/images/bg1_m.jpg) no-repeat center 0px;*/
+		background: url(/static/images/bg1_360x640.jpg) no-repeat;
+		background-size: 100%;
+	}
+
+	.bg2{
+		background: url(/static/images/bg2_360x640.jpg) no-repeat;
+		background-size: 100%;
+	}
+
+	.bg3{
+		background: url(/static/images/bg3_360x640.jpg) no-repeat;
+    	background-size: 100%;
+	}
+
+	.content-bottom-not-space{
+		padding-bottom: 0 !important;
+	}
+
+	.header-menu{
+		display: none;
+	}
+	.main .main-logo{
+		width: 100%;
+		height: 200px;
+		background-size: auto 150px;
+		margin-top: 80px;
+	}
+
+	.introduce{
+		padding: 0 20px;
+	}
+
+	.main{
+		padding-top: 0;
+	}
+	.main .introduce{
+		/*margin-top: 50px;*/
+	}
+
+	.instagram-area{
+		display: none;
+	}
+}
+
+@media screen and (max-width:320px) {
+	.main .introduce{
+		font-size: 30px !important;
+	}
+}

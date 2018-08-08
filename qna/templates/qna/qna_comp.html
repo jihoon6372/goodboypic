@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block title %}QNA{% endblock %}
+
+{% load staticfiles %}
+{% block extrastyle %}{% static 'css/qna.css' %}?v={{ css_version }}{% endblock %}
+
+{% block content %}
+<div id="content">
+	<div class="qna-comp">
+		<div class="title">문의 신청 완료</div>
+		<div class="qna-comp-msg">문의 신청이 성공적으로 완료 되었습니다.</div>	
+	</div>
+	<div class="qna-comp-detail">
+		<div class="qna_success_bg">
+			<div class="msg">확인 후 이메일로 답변 드리겠습니다.</div>
+		</div>
+	</div>
+</div>
+{% endblock %}
